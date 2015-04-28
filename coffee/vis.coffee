@@ -12,9 +12,9 @@ class BubbleChart
     # used
     @center = {x: @width / 2, y: @height / 2}
     @year_centers = {
-      "2008": {x: @width / 3, y: @height / 2},
-      "2009": {x: @width / 2, y: @height / 2},
-      "2010": {x: 2 * @width / 3, y: @height / 2}
+      "assessment": {x: @width / 3, y: @height / 2},
+      "feedback": {x: @width / 2, y: @height / 2},
+      "engagement": {x: 2 * @width / 3, y: @height / 2}
     }
 
     # used when setting up force and
@@ -31,11 +31,12 @@ class BubbleChart
     # nice looking colors - no reason to buck the trend
     @fill_color = d3.scale.ordinal()
       .domain(["low", "medium", "high"])
-      .range(["#d84b2a", "#beccae", "#7aa25c"])
+      # NEW: updated color scheme to USYD
+      .range(["#f1f1f1", "#0148a4", "#ffb800"])
 
     # use the max total_amount in the data as the max in the scale's domain
     max_amount = d3.max(@data, (d) -> parseInt(d.total_amount))
-    @radius_scale = d3.scale.pow().exponent(0.5).domain([0, max_amount]).range([2, 85])
+    @radius_scale = d3.scale.pow().exponent(0.5).domain([0, max_amount]).range([0, 100])
     
     this.create_nodes()
     this.create_vis()
@@ -48,12 +49,13 @@ class BubbleChart
     @data.forEach (d) =>
       node = {
         id: d.id
+        uos_id: d.uos_id
         radius: @radius_scale(parseInt(d.total_amount))
         value: d.total_amount
-        name: d.grant_title
-        org: d.organization
+        name: d.academic
+        org: d.unit_name
         group: d.group
-        year: d.start_year
+        year: d.area_of_success
         x: Math.random() * 900
         y: Math.random() * 800
       }
@@ -156,8 +158,15 @@ class BubbleChart
       d.y = d.y + (target.y - d.y) * (@damper + 0.02) * alpha * 1.1
 
   # Method to display year titles
+  # display_years: () =>
+  #   years_x = {"2008": 160, "2009": @width / 2, "2010": @width - 160}
+  #   years_data = d3.keys(years_x)
+  #   years = @vis.selectAll(".years")
+  #     .data(years_data)
+
+  # Method to display criteria
   display_years: () =>
-    years_x = {"2008": 160, "2009": @width / 2, "2010": @width - 160}
+    years_x = {"Assessment": 160, "Feedback": @width / 2, "Engagement": @width - 160}
     years_data = d3.keys(years_x)
     years = @vis.selectAll(".years")
       .data(years_data)
@@ -175,9 +184,10 @@ class BubbleChart
 
   show_details: (data, i, element) =>
     d3.select(element).attr("stroke", "black")
-    content = "<span class=\"name\">Title:</span><span class=\"value\"> #{data.name}</span><br/>"
-    content +="<span class=\"name\">Amount:</span><span class=\"value\"> $#{addCommas(data.value)}</span><br/>"
-    content +="<span class=\"name\">Year:</span><span class=\"value\"> #{data.year}</span>"
+    content = "<span class=\"name\">Who:</span><span class=\"value\"> #{data.name}</span><br/>"
+    content +="<span class=\"name\">Unit of Study:</span><span class=\"value\"> #{data.org}</span><br/>"
+    content +="<span class=\"name\">Discipline:</span><span class=\"value\"> #{data.uos_id}</span><br/>"
+    content +="<span class=\"name\">Talk to me about:</span><span class=\"value\"> #{data.year}</span>"
     @tooltip.showTooltip(content,d3.event)
 
 
@@ -189,7 +199,7 @@ class BubbleChart
 root = exports ? this
 
 $ ->
-  chart = null
+  chart = null  
 
   render_vis = (csv) ->
     chart = new BubbleChart csv

@@ -45,7 +45,8 @@
       this.nodes = [];
       this.force = null;
       this.circles = null;
-      this.fill_color = d3.scale.ordinal().domain(["low", "medium", "high"]).range(["#d84b2a", "#beccae", "#7aa25c"]);
+      // Change color legend
+      this.fill_color = d3.scale.ordinal().domain(["low", "medium", "high"]).range(["#f1f1f1", "#0148a4", "#ffb800"]);
       max_amount = d3.max(this.data, function(d) {
         return parseInt(d.total_amount);
       });

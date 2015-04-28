@@ -10,7 +10,15 @@ a, a:visited, a:active {
 }
 
 footer {
-  text-align: center;
+  text-align: left;
+}
+
+footer ul{
+  list-style-type: none;
+}
+
+aside {
+  text-align: left;
 }
 
 #view_selection {
