@@ -215,4 +215,4 @@ $ ->
     else
       root.display_all()
 
-  d3.csv "data/gates_money.csv", render_vis
+  d3.csv "data/2014_S2_USE_Success.csv", render_vis
