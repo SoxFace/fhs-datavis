@@ -17,6 +17,13 @@ class BubbleChart
       "ug4": {x: @width - 360, y: @height / 2},
       "pg": {x: @width - 260, y: @height / 2}
     }
+    @class_centers = {
+      "xsmall": {x: @width / 4, y: @height / 2},
+      "small": {x: (@width / 4) + 100, y: @height / 2},
+      "medium": {x: 2 * @width / 4, y: @height / 2},
+      "large": {x: @width - 360, y: @height / 2},
+      "xlarge": {x: @width - 260, y: @height / 2}
+    }
 
     # used when setting up force and
     # moving around nodes
@@ -37,7 +44,7 @@ class BubbleChart
 
     # use the max total_amount in the data as the max in the scale's domain
     max_amount = d3.max(@data, (d) -> parseInt(d.total_amount))
-    @radius_scale = d3.scale.pow().exponent(0.4).domain([0, max_amount]).range([0, 50])
+    @radius_scale = d3.scale.pow().exponent(0.4).domain([0, max_amount]).range([0, 40])
     
     this.create_nodes()
     this.create_vis()
@@ -129,7 +136,7 @@ class BubbleChart
           .attr("cy", (d) -> d.y)
     @force.start()
 
-    this.hide_years()
+    this.hide_years() && this.hide_classsize()
 
   # Moves all circles towards the @center
   # of the visualization
@@ -150,7 +157,7 @@ class BubbleChart
           .attr("cy", (d) -> d.y)
     @force.start()
 
-    this.display_years()
+    this.display_years() && this.hide_classsize()
 
   # move all circles to their associated @year_centers 
   move_towards_year: (alpha) =>
@@ -159,17 +166,10 @@ class BubbleChart
       d.x = d.x + (target.x - d.x) * (@damper + 0.02) * alpha * 1.1
       d.y = d.y + (target.y - d.y) * (@damper + 0.02) * alpha * 1.1
 
-  # Method to display year titles
-  # display_years: () =>
-  #   years_x = {"2008": 160, "2009": @width / 2, "2010": @width - 160}
-  #   years_data = d3.keys(years_x)
-  #   years = @vis.selectAll(".years")
-  #     .data(years_data)
-
   # Method to display criteria
   display_years: () =>
     # Titles
-    years_x = {"UG1": 50, "UG2": 180, "UG3": 360, "UG4": 520, "PG": @width - 200 }
+    years_x = {"UG1": 50, "UG2": 200, "UG3": 380, "UG4": 530, "PG": @width - 200 }
     years_data = d3.keys(years_x)
     years = @vis.selectAll(".years")
       .data(years_data)
@@ -184,6 +184,58 @@ class BubbleChart
   # Method to hide year titiles
   hide_years: () =>
     years = @vis.selectAll(".years").remove()
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+  # sets the display of bubbles to be separated
+  # into each class. Does this by calling move_towards_class
+  display_by_class: () =>
+    @force.gravity(@layout_gravity)
+      .charge(this.charge)
+      .friction(0.9)
+      .on "tick", (e) =>
+        @circles.each(this.move_towards_class(e.alpha))
+          .attr("cx", (d) -> d.x)
+          .attr("cy", (d) -> d.y)
+    @force.start()
+
+    this.display_classsize() && this.hide_years()
+
+  # move all circles to their associated @year_centers 
+  move_towards_class: (alpha) =>
+    (d) =>
+      target = @class_centers[d.class]
+      d.x = d.x + (target.x - d.x) * (@damper + 0.02) * alpha * 1.1
+      d.y = d.y + (target.y - d.y) * (@damper + 0.02) * alpha * 1.1
+
+  # Method to display criteria
+  display_classsize: () =>
+    # Titles
+    classsize_x = {"X-SMALL": 80, "SMALL": 320, "MEDIUM": 500, "LARGE": 660, "X-LARGE": @width - 100 }
+    classsize_data = d3.keys(classsize_x)
+    classsize = @vis.selectAll(".classsize")
+      .data(classsize_data)
+
+    classsize.enter().append("text")
+      .attr("class", "classsize")
+      .attr("x", (d) => classsize_x[d] )
+      .attr("y", 40)
+      .attr("text-anchor", "middle")
+      .text((d) -> d)
+
+  # Method to hide year titiles
+  hide_classsize: () =>
+    classsize = @vis.selectAll(".classsize").remove()
 
   show_details: (data, i, element) =>
     d3.select(element).attr("stroke", "black")
@@ -204,6 +256,7 @@ root = exports ? this
 $ ->
   chart = null  
 
+  # DRAW CHARTS
   render_vis = (csv) ->
     chart = new BubbleChart csv
     chart.start()
@@ -212,9 +265,14 @@ $ ->
     chart.display_group_all()
   root.display_year = () =>
     chart.display_by_year()
+  root.display_class = () =>
+    chart.display_by_class()
   root.toggle_view = (view_type) =>
     if view_type == 'year'
       root.display_year()
+    # remove to unbreak build
+    else if view_type == 'class'
+        root.display_class()
     else
       root.display_all()
 

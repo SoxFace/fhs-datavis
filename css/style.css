@@ -26,6 +26,11 @@ footer ul{
   fill: #aaa;
 }
 
+.classsize {
+  font-size: 21px;
+  fill: #aaa;
+}
+
 .tooltip {
 	position: absolute;
 	top: 100px;
