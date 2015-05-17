@@ -1,4 +1,3 @@
-
 class BubbleChart
   constructor: (data) ->
     @data = data
@@ -12,9 +11,9 @@ class BubbleChart
     # used
     @center = {x: @width / 2, y: @height / 2}
     @year_centers = {
-      "assessment": {x: @width / 3, y: @height / 2},
-      "feedback": {x: @width / 2, y: @height / 2},
-      "engagement": {x: 2 * @width / 3, y: @height / 2}
+      "ug1": {x: @width / 3, y: @height / 2},
+      "ug2": {x: @width / 2, y: @height / 2},
+      "ug3": {x: 2 * @width / 3, y: @height / 2}
     }
 
     # used when setting up force and
@@ -166,7 +165,8 @@ class BubbleChart
 
   # Method to display criteria
   display_years: () =>
-    years_x = {"Assessment": 160, "Feedback": @width / 2, "Engagement": @width - 160}
+    # Titles
+    years_x = {"UG1": 160, "UG2": @width / 2, "UG3": @width - 160}
     years_data = d3.keys(years_x)
     years = @vis.selectAll(".years")
       .data(years_data)
