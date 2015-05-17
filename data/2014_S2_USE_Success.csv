@@ -1,135 +1,135 @@
-academic,id,uos_id,unit_name,total_amount,group,area_of_success
-MELANIE NGUYEN,56,HSBH1005,Human Development,27600,ninety,ug1
-JACK NOONE,57,HSBH1007,Health Science and Research,28500,ninety,ug1
-SUSAN GOFF,58,HSBH1008,Health Determinants and Interventions,1770,fifty,ug1
-STEPHANIE SHORT,59,HSBH1009,Health Care Resources and Systems,1230,forty,ug1
-MARLENE FRANSEN,114,PHTY1024,Foundations of Physiotherapy Practice B,1020,thirty,ug1
-TOM GWINN,34,EXSS1029,Muscle Mechanics and Training,1230,forty,ug1
-GREOGORY FLANNERY,9,CSCD1032,Human Communication,18300,sixty,ug1
-KATHRYN EDWARDS,35,EXSS1032,Fundamentals of Exercise Science,27000,ninety,ug1
-MARK MCENTEE,78,MRTY1037,Imaging Technology 1,1200,forty,ug1
-NATALIE POLLARD,79,MRTY1038,Foundations of Work Integrated Learning,24600,eighty,ug1
-CELINE DIAZ,94,OCCP1099,Occupational Performance: Healthcare 1,300000,hundred,ug1
-CHRISTINE CHOY,95,OCCP1100,Professional Practice 1,26100,eighty,ug1
-HELEN O'CONNOR,36,EXSS2021,Nutrition Health and Performance,18600,sixty,ug2
-CHIN CHOW,37,EXSS2022,Exercise Physiology-Training Adaptations,27000,ninety,ug2
-ROSS SANDERS,38,EXSS2025,Motor Control and Learning,27000,ninety,ug2
-EMMANOUIL STAMATAKIS,39,EXSS2026,Growth Development and Ageing,23700,seventy,ug2
-MARK ONSLOW,10,CSCD2058,Stuttering,27000,ninety,ug2
-NIAMH MOLONEY,115,PHTY2059,PT in Musculoskeletal Conditions B,810,twenty,ug2
-LEANNE HASSETT,116,PHTY2061,Physiotherapy in Neurological Conditions,25200,eighty,ug2
-HANS BOGAARDT,11,CSCD2062,Motor Speech and Dysphagia,29400,ninety,ug2
-LOUISE GANDERTON,117,PHTY2062,PT in Respiratory and Cardiac Conditions,300000,hundred,ug2
-ANNIE CHAN,12,CSCD2066,Introductory Practice 2: Clinical,1080,thirty,ug2
-KATRINA GOTT,13,CSCD2067,Introductory Practice 2: Community,1380,forty,ug2
-REBECCA BARTON,96,OCCP2087,Occupational Performance: Community,24900,eighty,ug2
-ANITA BUNDY,97,OCCP2088,Occupational Performance: Child & Family,630,twenty,ug2
-JILLIAN CLARKE,80,MRTY2089,Integrated Diagnosis and Treatment,1680,fifty,ug2
-NATALIE POLLARD,81,MRTY2091,Clinical Education 2.3DR,28500,ninety,ug2
-STEVEN CUMMING,1,BACH2142,Cognitive Neuropsychology,100000,hundred,ug2
-STEVEN CUMMING,2,BACH2143,Counselling &Behaviour Management for CD,24300,eighty,ug2
-VANESSA LEE,60,HSBH3001,Health and Indigenous Populations,1050,thirty,ug3
-KATHLEEN O'LOUGHLIN,61,HSBH3003,Health Service Strategy and Policy,26700,eighty,ug3
-LEE-FAY LOW,62,HSBH3005,Evidence Based Health Care,19200,sixty,ug3
-CHARLOTTE SCARF,63,HSBH3009,International Health,23400,seventy,ug3
-LUIS SALVADOR-CARULLA,64,HSBH3010,Health and Lifelong Disability,20100,sixty,ug3
-Charlotte Scarf,65,HSBH3012,FHS Abroad,300000,hundred,ug3
-KATHLEEN O'LOUGHLIN,66,HSBH3016,Individual and Societal Ageing,26100,eighty,ug3
-NICOLE WEDGWOOD,67,HSBH3017,Disability Sport and Social Inclusion,26100,eighty,ug3
-JENNIFER SMITH-MERRY,68,HSBH3019,Qualitative Research Methods in Health,24600,eighty,ug3
-CHE FORNUSEK,40,EXSS3023,Exercise Testing and Prescription,26100,eighty,ug3
-ALYCIA FONG YAN,41,EXSS3027,Exercise and Rehabilitation,27600,ninety,ug3
-RHONDA ORR,42,EXSS3037,Exercise Pharmacology and Immunology,25200,eighty,ug3
-OLLIE JAY,43,EXSS3040,Physiological Testing and Training,300000,hundred,ug3
-EDOUARD FERDINANDS,44,EXSS3044,Biomechanics of Sports Techniques,27600,ninety,ug3
-MARIA FIATARONE SINGH,45,EXSS3050,Exercise Across the Lifespan,330,ten,ug3
-MARK HALAKI,46,EXSS3051,Projects in Exercise and Sport Science,300000,hundred,ug3
-SUSAN COULSON,118,PHTY3075,Interprofessional & Reflective Practice,990,thirty,ug3
-JOANNE LEWIS,98,OCCP3077,Occupational Performance: Productivity,28800,ninety,ug3
-SANETTA DU TOIT,99,OCCP3078,Occupational Performance: Retirement,21300,seventy,ug3
-ANNE HONEY,100,OCCP3079,Honours Research Seminar 1,300000,hundred,ug3
-KIMBERLEY DOCKING,14,CSCD3082,Phonology Language and Literacy,1740,fifty,ug3
-ROBYN JOHNSON,15,CSCD3083,Intermediate Clinic 2: Adult & Community,22800,seventy,ug3
-ROBYN JOHNSON,16,CSCD3084,Intermediate Clinic 2: Child & Community,24300,eighty,ug3
-HANS BOGAARDT,17,CSCD3085,Speech Pathology Research Methods,28800,ninety,ug3
-CATHERINE MADILL,18,CSCD3086,Voice and Voice Disorders,21900,seventy,ug3
-ROBYN JOHNSON,19,CSCD3089,Intermediate Clinic 2H:Child & Community,26400,eighty,ug3
-LYNDAL SHEEPWAY,20,CSCD3091,Fieldwork,1230,forty,ug3
-ROGER BOURNE,82,MRTY3100,Digital Imaging,1320,forty,ug3
-NICOLE FIELD,83,MRTY3101,Ethics Law and Professional Practice,18300,sixty,ug3
-JOHN ROBINSON,84,MRTY3107,Radiographic Physics 3,900,thirty,ug3
-WARREN REED,85,MRTY3118,MR Theory Applications,24900,eighty,ug3
-SYEDA HOSSAIN,3,BACH3128,Health and Globalisation,22500,seventy,ug3
-MARY LAM,4,BACH3146,Cyberpsychology and e-Health,20400,sixty,ug3
-PHILIP BOHLE,5,BACH3147,Health at Work,100000,hundred,ug3
-CHE FORNUSEK,47,EXSS4014,Case Studies 2 Clinical Exercise Science,28200,ninety,ug4
-MAREE DOBLE,21,CSCD4051,Evidence Based Practice for SP,27900,ninety,ug4
-KATHERINE SHORT,22,CSCD4052,Professional Issues,27000,ninety,ug4
-JENNIFER SMITH-MERRY,6,BACH4056,Qualitative Research Methods,300000,hundred,ug4
-NADIA TUDBERRY,23,CSCD4059,Advanced Practice B: Clinical,29100,ninety,ug4
-NADIA TUDBERRY,24,CSCD4060,Advanced Practice B: Community,28200,ninety,ug4
-ELISE BAKER,25,CSCD4065,Research Project,300000,hundred,ug4
-MICHELLE VILLENEUVE,101,OCCP4089,Evaluation in Professional Practice,27900,ninety,ug4
-ANNE HONEY,102,OCCP4093,Honours Thesis 2,300000,hundred,ug4
-JENNIFER FOLLETT,119,PHTY4114,Physiotherapy in Childhood,29400,ninety,ug4
-SUSAN COULSON,120,PHTY4117,Physiotherapy Management in Health Care,18000,sixty,ug4
-PAULO FERREIRA,121,PHTY4118,Honours Dissertation,28500,ninety,ug4
-Charlotte Scarf,69,HSBH5001,FHS Abroad,300000,hundred,pg
-NICOLE FIELD,71,MRSC5003,Foundations of Health Care Practice,23400,seventy,pg
-MARK MCENTEE,72,MRSC5005,Professional Practice Radiography 2,22500,seventy,pg
-Dr Meryl Lovarini,70,HSBH5006,Research elective dissertation,1500,fifty,pg
-STEWART EINFELD,53,GSDD5011,Autism Spectrum Disorders,1,one,pg
-MICHELE WIESE,54,GSDD5012,Positive Behaviour Support:Promoting QOL,300000,hundred,pg
-WARREN REED,73,MRSC5014,Professional Practice Radiography 4,300000,hundred,pg
-HANS BOGAARDT,26,CSCD5023,Swallowing and Neurogenics 1,29400,ninety,pg
-KIMBERLEY DOCKING,27,CSCD5024,Language 2,390,ten,pg
-PETER KENCH,86,MRTY5024,Current Issues in Medical Radiations,300000,hundred,pg
-CATHERINE MADILL,28,CSCD5025,Specialist Studies 2,300000,hundred,pg
-JOHN ATYEO,74,MRSC5025,Professional Practice Rad Therapy 4,24300,eighty,pg
-ANDREA SMIDT,29,CSCD5026,Professional Development 1,1110,thirty,pg
-JENNIFER HILL,30,CSCD5027,Clinical Practice 1,26700,eighty,pg
-NATALIE POLLARD,75,MRSC5027,Clinical Studies Radiography 2,22200,seventy,pg
-ANDREA SMIDT,31,CSCD5032,Research Led Practice,25500,eighty,pg
-MAREE DOBLE,32,CSCD5033,Applied Clinical Research,24000,eighty,pg
-TERRY JONES,87,MRTY5041,CT Practice II,300000,hundred,pg
-JODIE JACOBSON,7,BACH5042,Teaching Clinical Reasoning,300000,hundred,pg
-DALE BAILEY,76,MRSC5043,Medical Radiation Science 3 Rad Therapy,690,twenty,pg
-JOHN ATYEO,77,MRSC5044,Advanced MRS Practice,24600,eighty,pg
-MARIA FIATARONE SINGH,48,EXSS5048,Exercise Throughout the Lifespan,690,twenty,pg
-GILLIAN NISBET,110,ORTH5048,Professional Practice 3,300000,hundred,pg
-GILLIAN NISBET,111,ORTH5049,Professional Practice 4,27000,ninety,pg
-ALYCIA FONG YAN,49,EXSS5051,Clinical Biomechanics,690,twenty,pg
-AMANDA FRENCH,112,ORTH5051,Research Project 2,24300,eighty,pg
-Robyn Johnson,33,CSCD5053,Clinical Practice 3 Paediatric,300000,hundred,pg
-KATHRYN ROSE,113,ORTH5053,Advanced Professional Practice,18000,sixty,pg
-JOHN ATYEO,88,MRTY5056,Patient/Practitioner Communication,300000,hundred,pg
-TIMOTHY ENGLISH,50,EXSS5060,Advanced Exercise Programming,28500,ninety,pg
-JONATHAN FREESTON,51,EXSS5061,Professional Practice 2,300000,hundred,pg
-JAMES ATHANASOU,129,REHB5061,Applied Psychosocial and Medical Rehab,300000,hundred,pg
-GLEN DAVIS,52,EXSS5066,Clinical Exercise Science Case Studies 2,23100,seventy,pg
-MICHAEL MILLINGTON,130,REHB5072,Applied Counselling and Case Management,24900,eighty,pg
-ELIAS MPOFU,131,REHB5073,Client Assessment and Job Placement,1050,thirty,pg
-MICHAEL MILLINGTON,132,REHB5074,Professional Practice A,300000,hundred,pg
-MICHAEL MILLINGTON,133,REHB5075,Avocational Rehab Management,300000,hundred,pg
-MICHAEL MILLINGTON,134,REHB5080,Professional Practice B,990,thirty,pg
-ROGER BOURNE,89,MRTY5087,Advanced MR Theory,20100,sixty,pg
-JOHN ROBINSON,90,MRTY5091,Advanced Multiplanar Anatomy B,19200,sixty,pg
-STEPHEN LITTLEFAIR,91,MRTY5099,Radiographic Image Interpretation B,1200,forty,pg
-STEPHEN LITTLEFAIR,92,MRTY5100,Radiographic Image Interpretation C,1500,fifty,pg
-JILLIAN CLARKE,93,MRTY5106,Breast Imaging,300000,hundred,pg
-ANDREW LEAVER,122,PHTY5134,Therapy in Disorders of the Hand,300000,hundred,pg
-ALISON HARMER,123,PHTY5196,Professional and Scientific Practice,18000,sixty,pg
-MAREE MILROSS,124,PHTY5197,Neurological & Cardiopulmonary Physio,26400,eighty,pg
-PAULO FERREIRA,125,PHTY5198,Musculoskeletal Physiotherapy 3,1380,forty,pg
-EVANGELOS PAPPAS,126,PHTY5199,Musculoskeletal Physiotherapy 4,27300,ninety,pg
-GWYNNETH LLEWLLYN,55,GSDD5200,Disability Theory,300000,hundred,pg
-JUSTIN SULLIVAN,128,PHTY5202,Physiotherapy Healthcare and Society,1320,forty,pg
-Justin Sullivan,127,PHTY5202,Physiotherapy Healthcare and Society,20700,sixty,pg
-LOUISE MANDER,103,OCCP5208,Biomechanical & Sensorimotor Strategies,300000,hundred,pg
-SANDRA LIGHTFOOT,104,OCCP5218,OT in Home and Community Environments,22200,seventy,pg
-JOANNE LEWIS,105,OCCP5219,OT in School and Work Environments,25200,eighty,pg
-MICHELLE VILLENEUVE,106,OCCP5238,Developing OT Prof. Skills in Practice,23400,seventy,pg
-Christine Choy,107,OCCP5240,Implementing Skills in OT Prof Practice,510,ten,pg
-MICHELLE VILLENEUVE,108,OCCP5241,Evaluation of OT Practice,21000,seventy,pg
-SANETTA DU TOIT,109,OCCP5242,Reflexivity and OT Professional Practice,23700,seventy,pg
-SOPHIE LEWIS,8,BACH5255,Qualitative Research Methods,24900,eighty,pg
+academic,id,uos_id,unit_name,total_amount,group,area_of_success,class_size
+STEVEN CUMMING,1,BACH2142,Cognitive Neuropsychology,100000,hundred,ug2,xlarge
+STEVEN CUMMING,2,BACH2143,Counselling &Behaviour Management for CD,24300,eighty,ug2,xlarge
+GREOGORY FLANNERY,9,CSCD1032,Human Communication,18300,sixty,ug1,xlarge
+MARK ONSLOW,10,CSCD2058,Stuttering,27000,ninety,ug2,xlarge
+TOM GWINN,34,EXSS1029,Muscle Mechanics and Training,1230,forty,ug1,xlarge
+KATHRYN EDWARDS,35,EXSS1032,Fundamentals of Exercise Science,27000,ninety,ug1,xlarge
+HELEN O'CONNOR,36,EXSS2021,Nutrition Health and Performance,18600,sixty,ug2,xlarge
+CHIN CHOW,37,EXSS2022,Exercise Physiology-Training Adaptations,27000,ninety,ug2,xlarge
+ROSS SANDERS,38,EXSS2025,Motor Control and Learning,27000,ninety,ug2,xlarge
+EMMANOUIL STAMATAKIS,39,EXSS2026,Growth Development and Ageing,23700,seventy,ug2,xlarge
+CHE FORNUSEK,40,EXSS3023,Exercise Testing and Prescription,26100,eighty,ug3,xlarge
+MELANIE NGUYEN,56,HSBH1005,Human Development,27600,ninety,ug1,xlarge
+SUSAN GOFF,58,HSBH1008,Health Determinants and Interventions,1770,fifty,ug1,xlarge
+STEPHANIE SHORT,59,HSBH1009,Health Care Resources and Systems,1230,forty,ug1,xlarge
+VANESSA LEE,60,HSBH3001,Health and Indigenous Populations,1050,thirty,ug3,xlarge
+CHARLOTTE SCARF,63,HSBH3009,International Health,23400,seventy,ug3,xlarge
+LUIS SALVADOR-CARULLA,64,HSBH3010,Health and Lifelong Disability,20100,sixty,ug3,xlarge
+MARK MCENTEE,78,MRTY1037,Imaging Technology 1,1200,forty,ug1,xlarge
+NATALIE POLLARD,79,MRTY1038,Foundations of Work Integrated Learning,24600,eighty,ug1,xlarge
+MARLENE FRANSEN,114,PHTY1024,Foundations of Physiotherapy Practice B,1020,thirty,ug1,xlarge
+ALISON HARMER,123,PHTY5196,Professional and Scientific Practice,18000,sixty,pg,xlarge
+MAREE MILROSS,124,PHTY5197,Neurological & Cardiopulmonary Physio,26400,eighty,pg,xlarge
+PAULO FERREIRA,125,PHTY5198,Musculoskeletal Physiotherapy 3,1380,forty,pg,xlarge
+EVANGELOS PAPPAS,126,PHTY5199,Musculoskeletal Physiotherapy 4,27300,ninety,pg,xlarge
+HANS BOGAARDT,11,CSCD2062,Motor Speech and Dysphagia,29400,ninety,ug2,large
+KIMBERLEY DOCKING,14,CSCD3082,Phonology Language and Literacy,1740,fifty,ug3,large
+CATHERINE MADILL,18,CSCD3086,Voice and Voice Disorders,21900,seventy,ug3,large
+KIMBERLEY DOCKING,27,CSCD5024,Language 2,390,ten,pg,large
+CATHERINE MADILL,28,CSCD5025,Specialist Studies 2,300000,hundred,pg,large
+ANDREA SMIDT,29,CSCD5026,Professional Development 1,1110,thirty,pg,large
+JENNIFER HILL,30,CSCD5027,Clinical Practice 1,26700,eighty,pg,large
+ALYCIA FONG YAN,41,EXSS3027,Exercise and Rehabilitation,27600,ninety,ug3,large
+RHONDA ORR,42,EXSS3037,Exercise Pharmacology and Immunology,25200,eighty,ug3,large
+KATHLEEN O'LOUGHLIN,61,HSBH3003,Health Service Strategy and Policy,26700,eighty,ug3,large
+NICOLE FIELD,71,MRSC5003,Foundations of Health Care Practice,23400,seventy,pg,large
+MARK MCENTEE,72,MRSC5005,Professional Practice Radiography 2,22500,seventy,pg,large
+NATALIE POLLARD,75,MRSC5027,Clinical Studies Radiography 2,22200,seventy,pg,large
+JOHN ATYEO,77,MRSC5044,Advanced MRS Practice,24600,eighty,pg,large
+JILLIAN CLARKE,80,MRTY2089,Integrated Diagnosis and Treatment,1680,fifty,ug2,large
+NATALIE POLLARD,81,MRTY2091,Clinical Education 2.3DR,28500,ninety,ug2,large
+ROGER BOURNE,82,MRTY3100,Digital Imaging,1320,forty,ug3,large
+NICOLE FIELD,83,MRTY3101,Ethics Law and Professional Practice,18300,sixty,ug3,large
+JOHN ROBINSON,84,MRTY3107,Radiographic Physics 3,900,thirty,ug3,large
+WARREN REED,85,MRTY3118,MR Theory Applications,24900,eighty,ug3,large
+JOHN ROBINSON,90,MRTY5091,Advanced Multiplanar Anatomy B,19200,sixty,pg,large
+CELINE DIAZ,94,OCCP1099,Occupational Performance: Healthcare 1,300000,hundred,ug1,large
+CHRISTINE CHOY,95,OCCP1100,Professional Practice 1,26100,eighty,ug1,large
+REBECCA BARTON,96,OCCP2087,Occupational Performance: Community,24900,eighty,ug2,large
+ANITA BUNDY,97,OCCP2088,Occupational Performance: Child & Family,630,twenty,ug2,large
+JOANNE LEWIS,98,OCCP3077,Occupational Performance: Productivity,28800,ninety,ug3,large
+SANETTA DU TOIT,99,OCCP3078,Occupational Performance: Retirement,21300,seventy,ug3,large
+LOUISE MANDER,103,OCCP5208,Biomechanical & Sensorimotor Strategies,300000,hundred,pg,large
+SANDRA LIGHTFOOT,104,OCCP5218,OT in Home and Community Environments,22200,seventy,pg,large
+JOANNE LEWIS,105,OCCP5219,OT in School and Work Environments,25200,eighty,pg,large
+MICHELLE VILLENEUVE,106,OCCP5238,Developing OT Prof. Skills in Practice,23400,seventy,pg,large
+Christine Choy,107,OCCP5240,Implementing Skills in OT Prof Practice,510,ten,pg,large
+MICHELLE VILLENEUVE,108,OCCP5241,Evaluation of OT Practice,21000,seventy,pg,large
+SANETTA DU TOIT,109,OCCP5242,Reflexivity and OT Professional Practice,23700,seventy,pg,large
+NIAMH MOLONEY,115,PHTY2059,PT in Musculoskeletal Conditions B,810,twenty,ug2,large
+LEANNE HASSETT,116,PHTY2061,Physiotherapy in Neurological Conditions,25200,eighty,ug2,large
+LOUISE GANDERTON,117,PHTY2062,PT in Respiratory and Cardiac Conditions,300000,hundred,ug2,large
+SUSAN COULSON,118,PHTY3075,Interprofessional & Reflective Practice,990,thirty,ug3,large
+JENNIFER FOLLETT,119,PHTY4114,Physiotherapy in Childhood,29400,ninety,ug4,large
+SUSAN COULSON,120,PHTY4117,Physiotherapy Management in Health Care,18000,sixty,ug4,large
+Justin Sullivan,127,PHTY5202,Physiotherapy Healthcare and Society,20700,sixty,pg,large
+JUSTIN SULLIVAN,128,PHTY5202,Physiotherapy Healthcare and Society,1320,forty,pg,large
+SYEDA HOSSAIN,3,BACH3128,Health and Globalisation,22500,seventy,ug3,xsmall
+PHILIP BOHLE,5,BACH3147,Health at Work,100000,hundred,ug3,xsmall
+JENNIFER SMITH-MERRY,6,BACH4056,Qualitative Research Methods,300000,hundred,ug4,xsmall
+JODIE JACOBSON,7,BACH5042,Teaching Clinical Reasoning,300000,hundred,pg,xsmall
+SOPHIE LEWIS,8,BACH5255,Qualitative Research Methods,24900,eighty,pg,xsmall
+ROBYN JOHNSON,19,CSCD3089,Intermediate Clinic 2H:Child & Community,26400,eighty,ug3,xsmall
+ELISE BAKER,25,CSCD4065,Research Project,300000,hundred,ug4,xsmall
+EDOUARD FERDINANDS,44,EXSS3044,Biomechanics of Sports Techniques,27600,ninety,ug3,xsmall
+MARK HALAKI,46,EXSS3051,Projects in Exercise and Sport Science,300000,hundred,ug3,xsmall
+GLEN DAVIS,52,EXSS5066,Clinical Exercise Science Case Studies 2,23100,seventy,pg,xsmall
+MICHELE WIESE,54,GSDD5012,Positive Behaviour Support:Promoting QOL,300000,hundred,pg,xsmall
+Charlotte Scarf,65,HSBH3012,FHS Abroad,300000,hundred,ug3,xsmall
+Charlotte Scarf,69,HSBH5001,FHS Abroad,300000,hundred,pg,xsmall
+Dr Meryl Lovarini,70,HSBH5006,Research elective dissertation,1500,fifty,pg,xsmall
+JOHN ATYEO,88,MRTY5056,Patient/Practitioner Communication,300000,hundred,pg,xsmall
+JILLIAN CLARKE,93,MRTY5106,Breast Imaging,300000,hundred,pg,xsmall
+ANNE HONEY,100,OCCP3079,Honours Research Seminar 1,300000,hundred,ug3,xsmall
+ANNE HONEY,102,OCCP4093,Honours Thesis 2,300000,hundred,ug4,xsmall
+MICHAEL MILLINGTON,133,REHB5075,Avocational Rehab Management,300000,hundred,pg,xsmall
+MICHAEL MILLINGTON,134,REHB5080,Professional Practice B,990,thirty,pg,xsmall
+HANS BOGAARDT,17,CSCD3085,Speech Pathology Research Methods,28800,ninety,ug3,medium
+LYNDAL SHEEPWAY,20,CSCD3091,Fieldwork,1230,forty,ug3,medium
+HANS BOGAARDT,26,CSCD5023,Swallowing and Neurogenics 1,29400,ninety,pg,medium
+ANDREA SMIDT,31,CSCD5032,Research Led Practice,25500,eighty,pg,medium
+Robyn Johnson,33,CSCD5053,Clinical Practice 3 Paediatric,300000,hundred,pg,medium
+MARIA FIATARONE SINGH,45,EXSS3050,Exercise Across the Lifespan,330,ten,ug3,medium
+JACK NOONE,57,HSBH1007,Health Science and Research,28500,ninety,ug1,medium
+LEE-FAY LOW,62,HSBH3005,Evidence Based Health Care,19200,sixty,ug3,medium
+NICOLE WEDGWOOD,67,HSBH3017,Disability Sport and Social Inclusion,26100,eighty,ug3,medium
+WARREN REED,73,MRSC5014,Professional Practice Radiography 4,300000,hundred,pg,medium
+PETER KENCH,86,MRTY5024,Current Issues in Medical Radiations,300000,hundred,pg,medium
+MICHELLE VILLENEUVE,101,OCCP4089,Evaluation in Professional Practice,27900,ninety,ug4,medium
+MARY LAM,4,BACH3146,Cyberpsychology and e-Health,20400,sixty,ug3,small
+ANNIE CHAN,12,CSCD2066,Introductory Practice 2: Clinical,1080,thirty,ug2,small
+KATRINA GOTT,13,CSCD2067,Introductory Practice 2: Community,1380,forty,ug2,small
+ROBYN JOHNSON,15,CSCD3083,Intermediate Clinic 2: Adult & Community,22800,seventy,ug3,small
+ROBYN JOHNSON,16,CSCD3084,Intermediate Clinic 2: Child & Community,24300,eighty,ug3,small
+MAREE DOBLE,21,CSCD4051,Evidence Based Practice for SP,27900,ninety,ug4,small
+KATHERINE SHORT,22,CSCD4052,Professional Issues,27000,ninety,ug4,small
+NADIA TUDBERRY,23,CSCD4059,Advanced Practice B: Clinical,29100,ninety,ug4,small
+NADIA TUDBERRY,24,CSCD4060,Advanced Practice B: Community,28200,ninety,ug4,small
+MAREE DOBLE,32,CSCD5033,Applied Clinical Research,24000,eighty,pg,small
+OLLIE JAY,43,EXSS3040,Physiological Testing and Training,300000,hundred,ug3,small
+CHE FORNUSEK,47,EXSS4014,Case Studies 2 Clinical Exercise Science,28200,ninety,ug4,small
+MARIA FIATARONE SINGH,48,EXSS5048,Exercise Throughout the Lifespan,690,twenty,pg,small
+ALYCIA FONG YAN,49,EXSS5051,Clinical Biomechanics,690,twenty,pg,small
+TIMOTHY ENGLISH,50,EXSS5060,Advanced Exercise Programming,28500,ninety,pg,small
+JONATHAN FREESTON,51,EXSS5061,Professional Practice 2,300000,hundred,pg,small
+STEWART EINFELD,53,GSDD5011,Autism Spectrum Disorders,1,one,pg,small
+GWYNNETH LLEWLLYN,55,GSDD5200,Disability Theory,300000,hundred,pg,small
+KATHLEEN O'LOUGHLIN,66,HSBH3016,Individual and Societal Ageing,26100,eighty,ug3,small
+JENNIFER SMITH-MERRY,68,HSBH3019,Qualitative Research Methods in Health,24600,eighty,ug3,small
+JOHN ATYEO,74,MRSC5025,Professional Practice Rad Therapy 4,24300,eighty,pg,small
+DALE BAILEY,76,MRSC5043,Medical Radiation Science 3 Rad Therapy,690,twenty,pg,small
+TERRY JONES,87,MRTY5041,CT Practice II,300000,hundred,pg,small
+ROGER BOURNE,89,MRTY5087,Advanced MR Theory,20100,sixty,pg,small
+STEPHEN LITTLEFAIR,91,MRTY5099,Radiographic Image Interpretation B,1200,forty,pg,small
+STEPHEN LITTLEFAIR,92,MRTY5100,Radiographic Image Interpretation C,1500,fifty,pg,small
+GILLIAN NISBET,110,ORTH5048,Professional Practice 3,300000,hundred,pg,small
+GILLIAN NISBET,111,ORTH5049,Professional Practice 4,27000,ninety,pg,small
+AMANDA FRENCH,112,ORTH5051,Research Project 2,24300,eighty,pg,small
+KATHRYN ROSE,113,ORTH5053,Advanced Professional Practice,18000,sixty,pg,small
+PAULO FERREIRA,121,PHTY4118,Honours Dissertation,28500,ninety,ug4,small
+ANDREW LEAVER,122,PHTY5134,Therapy in Disorders of the Hand,300000,hundred,pg,small
+JAMES ATHANASOU,129,REHB5061,Applied Psychosocial and Medical Rehab,300000,hundred,pg,small
+MICHAEL MILLINGTON,130,REHB5072,Applied Counselling and Case Management,24900,eighty,pg,small
+ELIAS MPOFU,131,REHB5073,Client Assessment and Job Placement,1050,thirty,pg,small
+MICHAEL MILLINGTON,132,REHB5074,Professional Practice A,300000,hundred,pg,small

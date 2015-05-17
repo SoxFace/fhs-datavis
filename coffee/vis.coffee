@@ -57,6 +57,7 @@ class BubbleChart
         org: d.unit_name
         group: d.group
         year: d.area_of_success
+        class: d.class_size
         x: Math.random() * 900
         y: Math.random() * 800
       }
@@ -168,7 +169,7 @@ class BubbleChart
   # Method to display criteria
   display_years: () =>
     # Titles
-    years_x = {"UG1": 80, "UG2": 200, "UG3": 360, "UG4": 520, "PG": @width - 200 }
+    years_x = {"UG1": 50, "UG2": 180, "UG3": 360, "UG4": 520, "PG": @width - 200 }
     years_data = d3.keys(years_x)
     years = @vis.selectAll(".years")
       .data(years_data)
