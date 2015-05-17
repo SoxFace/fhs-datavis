@@ -11,9 +11,11 @@ class BubbleChart
     # used
     @center = {x: @width / 2, y: @height / 2}
     @year_centers = {
-      "ug1": {x: @width / 3, y: @height / 2},
-      "ug2": {x: @width / 2, y: @height / 2},
-      "ug3": {x: 2 * @width / 3, y: @height / 2}
+      "ug1": {x: @width / 4, y: @height / 2},
+      "ug2": {x: (@width / 4) + 100, y: @height / 2},
+      "ug3": {x: 2 * @width / 4, y: @height / 2},
+      "ug4": {x: @width - 360, y: @height / 2},
+      "pg": {x: @width - 260, y: @height / 2}
     }
 
     # used when setting up force and
@@ -166,7 +168,7 @@ class BubbleChart
   # Method to display criteria
   display_years: () =>
     # Titles
-    years_x = {"UG1": 160, "UG2": @width / 2, "UG3": @width - 160}
+    years_x = {"UG1": 80, "UG2": 200, "UG3": 360, "UG4": 520, "PG": @width - 200 }
     years_data = d3.keys(years_x)
     years = @vis.selectAll(".years")
       .data(years_data)
