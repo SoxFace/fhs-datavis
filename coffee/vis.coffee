@@ -221,7 +221,7 @@ class BubbleChart
   # Method to display criteria
   display_classsize: () =>
     # Titles
-    classsize_x = {"X-SMALL": 80, "SMALL": 320, "MEDIUM": 500, "LARGE": 660, "X-LARGE": @width - 100 }
+    classsize_x = {"1-20": 80, "20-40": 320, "40-60": 500, "60-100": 660, "100-400": @width - 100 }
     classsize_data = d3.keys(classsize_x)
     classsize = @vis.selectAll(".classsize")
       .data(classsize_data)
@@ -242,7 +242,7 @@ class BubbleChart
     content = "<span class=\"name\">Who:</span><span class=\"value\"> #{data.name}</span><br/>"
     content +="<span class=\"name\">Unit of Study:</span><span class=\"value\"> #{data.org}</span><br/>"
     content +="<span class=\"name\">Discipline:</span><span class=\"value\"> #{data.uos_id}</span><br/>"
-    content +="<span class=\"name\">Talk to me about:</span><span class=\"value\"> #{data.year}</span>"
+    content +="<span class=\"name\">My class size is:</span><span class=\"value\"> #{data.class}</span>"
     @tooltip.showTooltip(content,d3.event)
 
 
