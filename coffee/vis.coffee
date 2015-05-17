@@ -29,14 +29,14 @@ class BubbleChart
     @circles = null
 
     # nice looking colors - no reason to buck the trend
-    @fill_color = d3.scale.ordinal()
+    @fill_color = d3.scale. ordinal()
       .domain(["low", "medium", "high"])
       # NEW: updated color scheme to USYD
       .range(["#f1f1f1", "#0148a4", "#ffb800"])
 
     # use the max total_amount in the data as the max in the scale's domain
     max_amount = d3.max(@data, (d) -> parseInt(d.total_amount))
-    @radius_scale = d3.scale.pow().exponent(0.5).domain([0, max_amount]).range([0, 75])
+    @radius_scale = d3.scale.pow().exponent(0.4).domain([0, max_amount]).range([0, 50])
     
     this.create_nodes()
     this.create_vis()
