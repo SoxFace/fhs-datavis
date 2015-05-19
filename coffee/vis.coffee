@@ -169,7 +169,7 @@ class BubbleChart
   # Method to display criteria
   display_years: () =>
     # Titles
-    years_x = {"UG1": 50, "UG2": 200, "UG3": 380, "UG4": 530, "PG": @width - 200 }
+    years_x = {"UG1": 50, "UG2": 200, "UG3": 400, "UG4": 590, "PG": @width - 180 }
     years_data = d3.keys(years_x)
     years = @vis.selectAll(".years")
       .data(years_data)
