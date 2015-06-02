@@ -9,6 +9,12 @@ a, a:visited, a:active {
   margin-bottom: 10px;
 }
 
+aside {
+  float: right;
+  margin: 0 1.5%;
+  width: 20%;
+}
+
 footer {
   text-align: left;
 }
