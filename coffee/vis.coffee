@@ -40,7 +40,7 @@ class BubbleChart
     @fill_color = d3.scale. ordinal()
       .domain(["one", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety", "hundred"])
       # NEW: updated color scheme to USYD
-      .range(["#FFFFFF", "#FBE7E3", "#F8D0C8", "#F7C5BB", "#F4AEA0", "#F2A292", "#EF8B77", "#EC745C", "#EA684E", "#E75133", "#E64626"])
+      .range(["#d8e9fc", "#7bafd8", "#0078b2", "#215b7f", "#303f4e", "#FFFFFF", "#F8D0C8", "#F4AEA0", "#EF8B77", "#EA684E", "#E64626"])
 
     # use the max total_amount in the data as the max in the scale's domain
     max_amount = d3.max(@data, (d) -> parseInt(d.total_amount))
