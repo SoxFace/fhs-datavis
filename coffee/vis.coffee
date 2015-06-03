@@ -3,6 +3,7 @@ class BubbleChart
     @data = data
     @width = 940
     @height = 600
+    @default_radius = 25
 
     @tooltip = CustomTooltip("gates_tooltip", 240)
 
@@ -58,7 +59,8 @@ class BubbleChart
       node = {
         id: d.id
         uos_id: d.uos_id
-        radius: @radius_scale(parseInt(d.total_amount))
+        # radius: @radius_scale(parseInt(d.total_amount))
+        radius: @default_radius
         value: d.total_amount
         name: d.academic
         org: d.unit_name
