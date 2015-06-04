@@ -44,7 +44,7 @@ class BubbleChart
 
     # use the max response_rate in the data as the max in the scale's domain
     max_amount = d3.max(@data, (d) -> parseInt(d.response_rate))
-    @radius_scale = d3.scale.pow().exponent(0.4).domain([0, max_amount]).range([0, 45])
+    @radius_scale = d3.scale.pow().exponent(0.4).domain([0, max_amount]).range([0, 40])
     
     this.create_nodes()
     this.create_vis()
@@ -169,7 +169,7 @@ class BubbleChart
   # Method to display criteria
   display_years: () =>
     # Titles
-    years_x = {"UG1": 50, "UG2": 200, "UG3": 400, "UG4": 590, "PG": @width - 180 }
+    years_x = {"UG1": 80, "UG2": 200, "UG3": 380, "UG4": 540, "PG": @width - 180 }
     years_data = d3.keys(years_x)
     years = @vis.selectAll(".years")
       .data(years_data)
