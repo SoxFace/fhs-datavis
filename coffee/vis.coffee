@@ -42,8 +42,8 @@ class BubbleChart
       # NEW: updated color scheme to USYD
       .range(["#d8e9fc", "#7bafd8", "#0078b2", "#215b7f", "#303f4e", "#FFFFFF", "#F8D0C8", "#F4AEA0", "#EF8B77", "#EA684E", "#E64626"])
 
-    # use the max total_amount in the data as the max in the scale's domain
-    max_amount = d3.max(@data, (d) -> parseInt(d.total_amount))
+    # use the max response_rate in the data as the max in the scale's domain
+    max_amount = d3.max(@data, (d) -> parseInt(d.response_rate))
     @radius_scale = d3.scale.pow().exponent(0.4).domain([0, max_amount]).range([0, 50])
     
     this.create_nodes()
@@ -58,11 +58,11 @@ class BubbleChart
       node = {
         id: d.id
         uos_id: d.uos_id
-        radius: @radius_scale(parseInt(d.total_amount))
-        value: d.total_amount
+        radius: @radius_scale(parseInt(d.response_rate))
+        value: d.response_rate
         name: d.academic
         org: d.unit_name
-        group: d.group
+        group: d.agreement
         year: d.year_level
         class: d.class_size
         x: Math.random() * 900

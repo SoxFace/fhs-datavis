@@ -1,4 +1,4 @@
-academic,id,uos_id,unit_name,total_amount,group,year_level,class_size
+academic,id,uos_id,unit_name,response_rate,agreement,year_level,class_size
 STEVEN CUMMING,1,BACH2142,Cognitive Neuropsychology,300000,hundred,ug2,xlarge
 PHILIP BOHLE,5,BACH3147,Health at Work,300000,hundred,ug3,xsmall
 JENNIFER SMITH-MERRY,6,BACH4056,Qualitative Research Methods,300000,hundred,ug4,xsmall
