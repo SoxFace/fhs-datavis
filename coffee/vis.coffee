@@ -44,7 +44,7 @@ class BubbleChart
 
     # use the max response_rate in the data as the max in the scale's domain
     max_amount = d3.max(@data, (d) -> parseInt(d.response_rate))
-    @radius_scale = d3.scale.pow().exponent(0.4).domain([0, max_amount]).range([0, 40])
+    @radius_scale = d3.scale.pow().exponent(0.4).domain([0, max_amount]).range([0, 45])
     
     this.create_nodes()
     this.create_vis()
