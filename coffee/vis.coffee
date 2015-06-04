@@ -63,7 +63,7 @@ class BubbleChart
         name: d.academic
         org: d.unit_name
         group: d.group
-        year: d.area_of_success
+        year: d.year_level
         class: d.class_size
         x: Math.random() * 900
         y: Math.random() * 800
