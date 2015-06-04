@@ -38,13 +38,13 @@ class BubbleChart
 
     # nice looking colors - no reason to buck the trend
     @fill_color = d3.scale. ordinal()
-      .domain(["one", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety", "hundred"])
+      .domain(["not_valid", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety", "hundred"])
       # NEW: updated color scheme to USYD
-      .range(["#d8e9fc", "#7bafd8", "#0078b2", "#215b7f", "#303f4e", "#FFFFFF", "#F8D0C8", "#F4AEA0", "#EF8B77", "#EA684E", "#E64626"])
+      .range(["#000000", "#303f4e", "#215b7f", "#0078b2", "#7bafd8", "#d8e9fc", "#ffebeb", "#F8D0C8", "#F4AEA0", "#EF8B77", "#E64626"])
 
     # use the max response_rate in the data as the max in the scale's domain
     max_amount = d3.max(@data, (d) -> parseInt(d.response_rate))
-    @radius_scale = d3.scale.pow().exponent(0.4).domain([0, max_amount]).range([0, 50])
+    @radius_scale = d3.scale.pow().exponent(0.4).domain([0, max_amount]).range([0, 40])
     
     this.create_nodes()
     this.create_vis()
