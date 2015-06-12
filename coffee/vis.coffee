@@ -24,6 +24,12 @@ class BubbleChart
       "large": {x: @width - 360, y: @height / 2},
       "xlarge": {x: @width - 260, y: @height / 2}
     }
+    @value_centers = {
+      "150000": {x: @width / 4, y: @height / 2},
+      "500000": {x: (@width / 4) + 100, y: @height / 2},
+      "750000": {x: 2 * @width / 4, y: @height / 2},
+      "2000000": {x: @width - 360, y: @height / 2}    
+    }
 
     # used when setting up force and
     # moving around nodes
@@ -136,7 +142,7 @@ class BubbleChart
           .attr("cy", (d) -> d.y)
     @force.start()
 
-    this.hide_years() && this.hide_classsize()
+    this.hide_years() && this.hide_classsize() && this.hide_responserate()
 
   # Moves all circles towards the @center
   # of the visualization
@@ -157,7 +163,7 @@ class BubbleChart
           .attr("cy", (d) -> d.y)
     @force.start()
 
-    this.display_years() && this.hide_classsize()
+    this.display_years() && this.hide_classsize() && this.hide_responserate()
 
   # move all circles to their associated @year_centers 
   move_towards_year: (alpha) =>
@@ -169,7 +175,7 @@ class BubbleChart
   # Method to display criteria
   display_years: () =>
     # Titles
-    years_x = {"UG1": 80, "UG2": 200, "UG3": 380, "UG4": 540, "PG": @width - 180 }
+    years_x = {"UG1": 80, "UG2": 210, "UG3": 410, "UG4": 570, "PG": @width - 180 }
     years_data = d3.keys(years_x)
     years = @vis.selectAll(".years")
       .data(years_data)
@@ -181,7 +187,7 @@ class BubbleChart
       .attr("text-anchor", "middle")
       .text((d) -> d)
 
-  # Method to hide year titiles
+  # Method to hide year titles
   hide_years: () =>
     years = @vis.selectAll(".years").remove()
 
@@ -209,7 +215,7 @@ class BubbleChart
           .attr("cy", (d) -> d.y)
     @force.start()
 
-    this.display_classsize() && this.hide_years()
+    this.display_classsize() && this.hide_years() && this.hide_responserate()
 
   # move all circles to their associated @year_centers 
   move_towards_class: (alpha) =>
@@ -221,7 +227,7 @@ class BubbleChart
   # Method to display criteria
   display_classsize: () =>
     # Titles
-    classsize_x = {"1-20": 80, "20-40": 320, "40-60": 500, "60-100": 660, "100-400": @width - 100 }
+    classsize_x = {"1-20": 80, "20-40": 300, "40-60": 490, "60-100": 650, "100-400": @width - 100 }
     classsize_data = d3.keys(classsize_x)
     classsize = @vis.selectAll(".classsize")
       .data(classsize_data)
@@ -235,7 +241,47 @@ class BubbleChart
 
   # Method to hide year titiles
   hide_classsize: () =>
-    classsize = @vis.selectAll(".classsize").remove()
+    classsize = @vis.selectAll(".classsize").remove();
+
+  # sets the display of bubbles to be separated
+  # into each response rate. Does this by calling move_towards_class
+  display_by_value: () =>
+    @force.gravity(@layout_gravity)
+      .charge(this.charge)
+      .friction(0.9)
+      .on "tick", (e) =>
+        @circles.each(this.move_towards_value(e.alpha))
+          .attr("cx", (d) -> d.x)
+          .attr("cy", (d) -> d.y)
+    @force.start()
+
+    this.display_responserate() && this.hide_years() && this.hide_classsize()
+
+  # move all circles to their associated @year_centers 
+  move_towards_value: (alpha) =>
+    (d) =>
+      target = @value_centers[d.value]
+      d.x = d.x + (target.x - d.x) * (@damper + 0.02) * alpha * 1.1
+      d.y = d.y + (target.y - d.y) * (@damper + 0.02) * alpha * 1.1
+
+  # Method to display criteria
+  display_responserate: () =>
+    # Titles
+    responserate_x = {"0%-19%": 60, "20%-49%": 210, "50%-79%": 410, "80%-100%": 630 }
+    responserate_data = d3.keys(responserate_x)
+    responserate = @vis.selectAll(".responserate")
+      .data(responserate_data)
+
+    responserate.enter().append("text")
+      .attr("class", "responserate")
+      .attr("x", (d) => responserate_x[d] )
+      .attr("y", 40)
+      .attr("text-anchor", "middle")
+      .text((d) -> d)
+
+  # Method to hide response rate titles
+  hide_responserate: () =>
+    responserate = @vis.selectAll(".responserate").remove()
 
   show_details: (data, i, element) =>
     d3.select(element).attr("stroke", "black")
@@ -267,12 +313,15 @@ $ ->
     chart.display_by_year()
   root.display_class = () =>
     chart.display_by_class()
+  root.display_value = () =>
+    chart.display_by_value()
   root.toggle_view = (view_type) =>
     if view_type == 'year'
       root.display_year()
-    # remove to unbreak build
     else if view_type == 'class'
         root.display_class()
+    else if view_type == 'responserate'
+        root.display_value()
     else
       root.display_all()
 

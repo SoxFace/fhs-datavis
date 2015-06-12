@@ -27,12 +27,7 @@ footer ul{
   margin-top: 10px;
 }
 
-.years {
-  font-size: 21px;
-  fill: #aaa;
-}
-
-.classsize {
+.years, .classsize, .responserate {
   font-size: 21px;
   fill: #aaa;
 }
