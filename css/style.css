@@ -12,7 +12,9 @@ a, a:visited, a:active {
 aside {
   float: right;
   width: 20%;
-  margin-top: 10px;
+  position: fixed;
+  bottom: 100px;
+  right: 10px;
 }
 
 .description {
@@ -21,16 +23,16 @@ aside {
   margin: 0px;
 }
 
+header {
+  margin-top: 10px;
+}
+
 footer {
   text-align: center;
 }
 
-footer ul{
-  list-style-type: none;
-}
-
 #view_selection {
-  margin-top: 30px;
+  margin-top: 60px;
 }
 
 .years, .classsize, .responserate {
