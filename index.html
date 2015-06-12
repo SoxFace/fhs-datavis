@@ -26,68 +26,51 @@
 </head>
 
 <body>
+
+  <aside>
+    <div class='my-legend'>
+      <div class='legend-scale'>
+        <ul class='legend-labels'>
+          <h4>Agreement:</h4>
+          <li><span style='background:#E64626;'></span>90%-100%</li>
+          <li><span style='background:#EA684E;'></span>80%-89%</li>
+          <li><span style='background:#EF8B77;'></span>70%-79%</li>
+          <li><span style='background:#F4AEA0;'></span>60%-69%</li>
+          <li><span style='background:#F8D0C8;'></span>50%-59%</li>
+          <li><span style='background:#ffebeb;'></span>40%-49%</li>
+          <li><span style='background:#d8e9fc;'></span>30%-39%</li>
+          <li><span style='background:#7bafd8;'></span>20%-29%</li>
+          <li><span style='background:#0078b2;'></span>10%-19%</li>
+          <li><span style='background:#215b7f;'></span>0%-9%</li>
+          <li><span style='background:#000000;'></span>Not statistically valid i.e. ( <5 students and <20% response )</li>
+        </ul>
+      </div>
+    </div>
+    
+  </aside>
   
   <div id="container" class="container">
     <header>
-    <h1>Learning & Teaching Salutes Staff Success</h1>
-    <h2>Reflecting on Teaching in 2014, Semester 2</h2>
-    <h3>Using USE data, we identified units of study who performed well on Q12: Overall Satisfaction</h3>
-    <h4>(minimum response of 20%)</h4>
-
-    <aside>
-      <div class='my-legend'>
-        <div class='legend-scale'>
-          <ul class='legend-labels'>
-            <h4>Agreement:</h4>
-            <li><span style='background:#E64626;'></span>90%-100%</li>
-            <li><span style='background:#EA684E;'></span>80%-89%</li>
-            <li><span style='background:#EF8B77;'></span>70%-79%</li>
-            <li><span style='background:#F4AEA0;'></span>60%-69%</li>
-            <li><span style='background:#F8D0C8;'></span>50%-59%</li>
-            <li><span style='background:#ffebeb;'></span>40%-49%</li>
-            <li><span style='background:#d8e9fc;'></span>30%-39%</li>
-            <li><span style='background:#7bafd8;'></span>20%-29%</li>
-            <li><span style='background:#0078b2;'></span>10%-19%</li>
-            <li><span style='background:#215b7f;'></span>0%-9%</li>
-            <li><span style='background:#000000;'></span>Not statistically valid i.e.<br>( <5 students and <20% response )</li>
-          </ul>
-        </div>
-      </div>
-      
-    </aside>
-
-
-    <aside>
-      <div class='my-legend'>
-        <div class='legend-scale'>
-          <ul class='legend-labels'>
-            <h4>Response:</h4>
-            <li><span>Bigger</span> 80%-100%</li>
-            <li><span>Big</span> 50%-79%</li>
-            <li><span>Small</span> 20%-49%</li>
-            <li><span>Smaller</span> 0%-19%</li>
-          </ul>
-        </div>
-      </div>
-      
-    </aside>
-
+      <h1>Learning & Teaching Salutes Staff Success</h1>
+      <h2>Reflecting on Teaching in 2014, Semester 2</h2>
+      <hr>
+      <p><span class="description">Using USE data, we identified units of study who performed well on Q12: Overall Satisfaction.</p></span>
     </header>
 
     <div id="main" role="main">
+
       <div id="view_selection" class="btn-group">
         <a href="#" id="all" class="btn active">Agreement</a>
         <a href="#" id="year" class="btn">Year Level</a>
         <a href="#" id="class" class="btn">Class Size</a>
-        <a href="#" id="responserate" class="btn">Response Rate</a>
-
-
+        <a href="#" id="responserate" class="btn">Response Rate</a><br>
       </div>
       <div id="vis"></div>
     </div>
 
 
     <footer>
+    <div class="alert alert-info" role="alert"><strong>HINT:</strong> Click the buttons to animate the dataset</div>
     </footer>
   </div> <!--! end of #container -->
 

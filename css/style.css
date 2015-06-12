@@ -11,12 +11,18 @@ a, a:visited, a:active {
 
 aside {
   float: right;
-  margin: 0 1.5%;
   width: 20%;
+  margin-top: 10px;
+}
+
+.description {
+  color: #303f4e;
+  font-size: 16px;
+  margin: 0px;
 }
 
 footer {
-  text-align: left;
+  text-align: center;
 }
 
 footer ul{
@@ -24,7 +30,7 @@ footer ul{
 }
 
 #view_selection {
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 .years, .classsize, .responserate {
