@@ -18,11 +18,11 @@ class BubbleChart
       "pg": {x: @width - 260, y: @height / 2}
     }
     @class_centers = {
-      "xsmall": {x: @width / 4, y: @height / 2},
-      "small": {x: (@width / 4) + 100, y: @height / 2},
-      "medium": {x: 2 * @width / 4, y: @height / 2},
-      "large": {x: @width - 360, y: @height / 2},
-      "xlarge": {x: @width - 260, y: @height / 2}
+      "90000": {x: @width / 4, y: @height / 2},
+      "150000": {x: (@width / 4) + 100, y: @height / 2},
+      "500000": {x: 2 * @width / 4, y: @height / 2},
+      "750000": {x: @width - 360, y: @height / 2},
+      "2000000": {x: @width - 260, y: @height / 2}
     }
     @value_centers = {
       "150000": {x: @width / 4, y: @height / 2},
@@ -49,7 +49,7 @@ class BubbleChart
       .range(["#000000", "#303f4e", "#215b7f", "#0078b2", "#7bafd8", "#d8e9fc", "#ffebeb", "#F8D0C8", "#F4AEA0", "#EF8B77", "#E64626"])
 
     # use the max response_rate in the data as the max in the scale's domain
-    max_amount = d3.max(@data, (d) -> parseInt(d.response_rate))
+    max_amount = d3.max(@data, (d) -> parseInt(d.class_size))
     @radius_scale = d3.scale.pow().exponent(0.4).domain([0, max_amount]).range([0, 30])
     
     this.create_nodes()
@@ -64,7 +64,7 @@ class BubbleChart
       node = {
         id: d.id
         uos_id: d.uos_id
-        radius: @radius_scale(parseInt(d.response_rate))
+        radius: @radius_scale(parseInt(d.class_size))
         value: d.response_rate
         name: d.academic
         org: d.unit_name
