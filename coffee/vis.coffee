@@ -46,7 +46,7 @@ class BubbleChart
     @fill_color = d3.scale. ordinal()
       .domain(["not_valid", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety", "hundred"])
       # NEW: updated color scheme to USYD
-      .range(["#000000", "#303f4e", "#215b7f", "#0078b2", "#7bafd8", "#d8e9fc", "#ffebeb", "#F8D0C8", "#F4AEA0", "#EF8B77", "#E64626"])
+      .range(["#3C3E47", "#303f4e", "#215b7f", "#0078b2", "#7bafd8", "#d8e9fc", "#ffebeb", "#F8D0C8", "#F4AEA0", "#EF8B77", "#E64626"])
 
     # use the max response_rate in the data as the max in the scale's domain
     max_amount = d3.max(@data, (d) -> parseInt(d.class_size))
@@ -175,7 +175,7 @@ class BubbleChart
   # Method to display criteria
   display_years: () =>
     # Titles
-    years_x = {"UG1": 80, "UG2": 210, "UG3": 410, "UG4": 570, "PG": @width - 180 }
+    years_x = {"UG1": 100, "UG2": 280, "UG3": 460, "UG4": 610, "PG": @width - 180 }
     years_data = d3.keys(years_x)
     years = @vis.selectAll(".years")
       .data(years_data)
@@ -227,7 +227,7 @@ class BubbleChart
   # Method to display criteria
   display_classsize: () =>
     # Titles
-    classsize_x = {"1-20": 80, "20-40": 300, "40-60": 490, "60-100": 650, "100-400": @width - 100 }
+    classsize_x = {"1-20": 100, "20-40": 220, "40-60": 370, "60-100": 540, "100-400": @width - 180 }
     classsize_data = d3.keys(classsize_x)
     classsize = @vis.selectAll(".classsize")
       .data(classsize_data)
@@ -267,7 +267,7 @@ class BubbleChart
   # Method to display criteria
   display_responserate: () =>
     # Titles
-    responserate_x = {"0%-19%": 60, "20%-49%": 210, "50%-79%": 410, "80%-100%": 630 }
+    responserate_x = {"0%-19%": 70, "20%-49%": 280, "50%-79%": 520, "80%-100%": 700 }
     responserate_data = d3.keys(responserate_x)
     responserate = @vis.selectAll(".responserate")
       .data(responserate_data)
