@@ -30,6 +30,17 @@ class BubbleChart
       "750000": {x: 2 * @width / 4, y: @height / 2},
       "2000000": {x: @width - 360, y: @height / 2}    
     }
+    @uos_id_centers = {
+      "BACH": {x: 200, y: @height / 2},
+      "CSCD": {x: 260, y: @height / 2},
+      "EXSS": {x: 320, y: @height / 2},
+      "GSDD": {x: 380, y: @height / 2},
+      "MRTY": {x: 440, y: @height / 2}, 
+      "OCCP": {x: 500, y: @height / 2},
+      "ORTH": {x: 560, y: @height / 2},
+      "PHTY": {x: 620, y: @height / 2},
+      "REHB": {x: 700, y: @height / 2}
+    }
 
     # used when setting up force and
     # moving around nodes
@@ -63,7 +74,7 @@ class BubbleChart
     @data.forEach (d) =>
       node = {
         id: d.id
-        uos_id: d.uos_id
+        uos_id: d.discipline
         radius: @radius_scale(parseInt(d.class_size))
         value: d.response_rate
         name: d.academic
@@ -142,7 +153,7 @@ class BubbleChart
           .attr("cy", (d) -> d.y)
     @force.start()
 
-    this.hide_years() && this.hide_classsize() && this.hide_responserate()
+    this.hide_years() && this.hide_classsize() && this.hide_responserate() && this.hide_discipline()
 
   # Moves all circles towards the @center
   # of the visualization
@@ -163,7 +174,7 @@ class BubbleChart
           .attr("cy", (d) -> d.y)
     @force.start()
 
-    this.display_years() && this.hide_classsize() && this.hide_responserate()
+    this.display_years() && this.hide_classsize() && this.hide_responserate() && this.hide_discipline()
 
   # move all circles to their associated @year_centers 
   move_towards_year: (alpha) =>
@@ -215,7 +226,7 @@ class BubbleChart
           .attr("cy", (d) -> d.y)
     @force.start()
 
-    this.display_classsize() && this.hide_years() && this.hide_responserate()
+    this.display_classsize() && this.hide_years() && this.hide_responserate() && this.hide_discipline()
 
   # move all circles to their associated @year_centers 
   move_towards_class: (alpha) =>
@@ -255,7 +266,7 @@ class BubbleChart
           .attr("cy", (d) -> d.y)
     @force.start()
 
-    this.display_responserate() && this.hide_years() && this.hide_classsize()
+    this.display_responserate() && this.hide_years() && this.hide_classsize() && this.hide_discipline()
 
   # move all circles to their associated @year_centers 
   move_towards_value: (alpha) =>
@@ -282,6 +293,49 @@ class BubbleChart
   # Method to hide response rate titles
   hide_responserate: () =>
     responserate = @vis.selectAll(".responserate").remove()
+
+
+  # sets the display of bubbles to be separated
+  # into each discipline. Does this by calling move_towards_class
+  display_by_uos_id: () =>
+    @force.gravity(@layout_gravity)
+      .charge(this.charge)
+      .friction(0.9)
+      .on "tick", (e) =>
+        @circles.each(this.move_towards_uos_id(e.alpha))
+          .attr("cx", (d) -> d.x)
+          .attr("cy", (d) -> d.y)
+    @force.start()
+
+    this.display_discipline() && this.hide_years() && this.hide_classsize() && this.hide_responserate()
+
+  # move all circles to their associated @year_centers 
+  move_towards_uos_id: (alpha) =>
+    (d) =>
+      target = @uos_id_centers[d.uos_id]
+      d.x = d.x + (target.x - d.x) * (@damper + 0.02) * alpha * 1.1
+      d.y = d.y + (target.y - d.y) * (@damper + 0.02) * alpha * 1.1
+
+  # Method to display criteria
+  display_discipline: () =>
+    # Titles
+    discipline_x = {"BACH": 50, "CSCD": 190, "EXSS": 300, "GSDD": 380, "MRTY": 460, "OCCP": 560, "ORTH": 640, "PHTY": 720, "REHB": 840 }
+    discipline_data = d3.keys(discipline_x)
+    discipline = @vis.selectAll(".discipline")
+      .data(discipline_data)
+
+    discipline.enter().append("text")
+      .attr("class", "discipline")
+      .attr("x", (d) => discipline_x[d] )
+      .attr("y", 40)
+      .attr("text-anchor", "middle")
+      .text((d) -> d)
+
+  # Method to hide response rate titles
+  hide_discipline: () =>
+    discipline = @vis.selectAll(".discipline").remove()
+
+
 
   show_details: (data, i, element) =>
     d3.select(element).attr("stroke", "black")
@@ -315,6 +369,8 @@ $ ->
     chart.display_by_class()
   root.display_value = () =>
     chart.display_by_value()
+  root.display_uos_id = () =>
+    chart.display_by_uos_id()
   root.toggle_view = (view_type) =>
     if view_type == 'year'
       root.display_year()
@@ -322,6 +378,8 @@ $ ->
         root.display_class()
     else if view_type == 'responserate'
         root.display_value()
+    else if view_type == 'discipline'
+        root.display_uos_id()
     else
       root.display_all()
 

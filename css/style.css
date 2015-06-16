@@ -35,7 +35,7 @@ footer {
   margin-top: 20px;
 }
 
-.years, .classsize, .responserate {
+.years, .classsize, .responserate, .discipline {
   font-size: 21px;
   fill: #aaa;
 }
