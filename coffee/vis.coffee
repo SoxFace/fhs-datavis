@@ -4,7 +4,7 @@ class BubbleChart
     @width = 940
     @height = 600
 
-    @tooltip = CustomTooltip("gates_tooltip", 240)
+    # @tooltip = CustomTooltip("gates_tooltip", 240)
 
     # locations the nodes will move towards
     # depending on which view is currently being
@@ -289,12 +289,12 @@ class BubbleChart
     content +="<span class=\"name\">Unit of Study:</span><span class=\"value\"> #{data.org}</span><br/>"
     content +="<span class=\"name\">Discipline:</span><span class=\"value\"> #{data.uos_id}</span><br/>"
     content +="<span class=\"name\">My class size is:</span><span class=\"value\"> #{data.class}</span>"
-    @tooltip.showTooltip(content,d3.event)
+    # @tooltip.showTooltip(content,d3.event)
 
 
   hide_details: (data, i, element) =>
     d3.select(element).attr("stroke", (d) => d3.rgb(@fill_color(d.group)).darker())
-    @tooltip.hideTooltip()
+    # @tooltip.hideTooltip()
 
 
 root = exports ? this
