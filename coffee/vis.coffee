@@ -15,7 +15,8 @@ class BubbleChart
       "ug2": {x: (@width / 4) + 100, y: @height / 2},
       "ug3": {x: 2 * @width / 4, y: @height / 2},
       "ug4": {x: @width - 360, y: @height / 2},
-      "pg": {x: @width - 260, y: @height / 2}
+      "pg1": {x: @width - 300, y: @height / 2},
+      "pg2": {x: @width - 260, y: @height / 2}
     }
     @class_centers = {
       "90000": {x: @width / 4, y: @height / 2},
@@ -186,7 +187,7 @@ class BubbleChart
   # Method to display criteria
   display_years: () =>
     # Titles
-    years_x = {"UG1": 100, "UG2": 280, "UG3": 460, "UG4": 610, "PG": @width - 180 }
+    years_x = {"UG1": 100, "UG2": 280, "UG3": 460, "UG4": 610, "PG1": @width - 200, "PG2": @width - 130  }
     years_data = d3.keys(years_x)
     years = @vis.selectAll(".years")
       .data(years_data)
