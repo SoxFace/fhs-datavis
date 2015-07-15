@@ -238,7 +238,7 @@ class BubbleChart
   # Method to display criteria
   display_classsize: () =>
     # Titles
-    classsize_x = {"1-20": 100, "20-40": 220, "40-60": 370, "60-100": 540, "100-400": @width - 180 }
+    classsize_x = {"1-19": 100, "20-39": 220, "40-59": 370, "60-99": 540, "100-400": @width - 180 }
     classsize_data = d3.keys(classsize_x)
     classsize = @vis.selectAll(".classsize")
       .data(classsize_data)
@@ -383,4 +383,31 @@ $ ->
     else
       root.display_all()
 
-  d3.csv "data/2014_S2_USE_Success.csv", render_vis
+  $('#view_selection a').click ->
+    view_type = $(this).attr('id')
+    $('#view_selection a').removeClass 'active'
+    $(this).toggleClass 'active'
+    toggle_view view_type
+    false
+
+    # CHANGE CSV FILES
+  root.toggle_semester = (view_type) =>
+    if view_type == 's1'
+      loadD3("data/2014_S1_USE_Success.csv")
+    else if view_type == 's2'
+      loadD3("data/2014_S2_USE_Success.csv")
+    else
+      loadD3("data/2014_ALL_USE_Success.csv")
+
+  $('#semester_selection a').click ->
+    id = $(this).attr('id')
+    $('#vis').empty()
+    $('#view_selection a').removeClass 'active'
+    $('#semester_selection a').removeClass 'active'
+    $(this).toggleClass 'active'
+    toggle_semester id
+    false
+
+  loadD3 = (csv_file) -> d3.csv csv_file, render_vis
+
+  toggle_semester 's1'

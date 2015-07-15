@@ -60,8 +60,8 @@
 
       <div class="alert alert-info" role="alert"><strong>Click</strong> each button to animate the dataset</div>
       <div id="semester_selection" class="btn-group">
-        <a href="#" id="s1" class="btn">Semester 1</a>
-        <a href="#" id="s2" class="btn active">Semester 2</a>
+        <a href="#" id="s1" class="btn active">Semester 1</a>
+        <a href="#" id="s2" class="btn">Semester 2</a>
         <a href="#" id="2014" class="btn">All of 2014</a>
       </div>
       <div id="view_selection" class="btn-group">
@@ -90,19 +90,7 @@
   <script src="js/libs/coffee-script.js"></script>
   <script src="js/libs/d3.js"></script>
   <script type="text/coffeescript" src="coffee/vis.coffee"></script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-        $(document).ready(function() {
-          $('#view_selection a').click(function() {
-            var view_type = $(this).attr('id');
-            $('#view_selection a').removeClass('active');
-            $(this).toggleClass('active');
-            toggle_view(view_type);
-            return false;
-          });
-        });
-    });
-  </script>
+
 
   <script>
     window._gaq = [['_setAccount','UA-17355070-1'],['_trackPageview'],['_trackPageLoadTime']];
